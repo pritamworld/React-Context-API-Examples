@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import UserContext from './UserContext';
+import Home from './Home';
 
+let user = {
+  first_name: "Pritesh",
+  last_name: "Patel",
+  isLoggedIn: false,
+
+  display: () => {
+      console.log("Hello from Context User Object")
+  }
+}
+//<UserContext.Provider value={{u1: user, u2: user}}>
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Week12 - Context API</h1>
+      <UserContext.Provider value={user}>
+        <Home/>
+      </UserContext.Provider>
+    </>
   );
 }
 
