@@ -1,25 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
-import UserContext from './UserContext';
+import EmployeeContext from './EmployeeContext'
 import Home from './Home';
 
-let user = {
-  first_name: "Pritesh",
-  last_name: "Patel",
-  isLoggedIn: false,
+const employee = {
+  eid: 1,
+  efnm: "Pritesh",
+  elnm: "Patel",
+  salary: 5000,
 
   display: () => {
-      console.log("Hello from Context User Object")
+    console.log("I am from Employee Context State Object")
+  },
+
+  updateFirstName(name) {
+    console.log('First Name Updated')
+    this.efnm = name
   }
 }
-//<UserContext.Provider value={{u1: user, u2: user}}>
+
+//<UserContext.Provider value={{e1:employee, e2:employee}}>
 function App() {
   return (
     <>
-      <h1>Week12 - Context API</h1>
-      <UserContext.Provider value={user}>
-        <Home/>
-      </UserContext.Provider>
+      <h1>ReactJS Context API Example</h1>
+      <EmployeeContext.Provider value={employee}>
+          <Home/>
+      </EmployeeContext.Provider>
     </>
   );
 }

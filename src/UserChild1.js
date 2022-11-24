@@ -1,23 +1,25 @@
 import React, { Component } from 'react'
-import UserContext from './UserContext'
+import EmployeeContext from './EmployeeContext'
 
 export default class UserChild1 extends Component {
   render() {
     return (
-      <>
-        <h2>User Child - 1</h2>
-        <UserContext.Consumer>
-        {(user) => {
-                return(
-                    <>
-                        <h4>First Name:{user.first_name}</h4>
-                        <h4>Last Name:{user.last_name}</h4>
-                    </> 
-                )
-            }  
-        }
-        </UserContext.Consumer>
-      </>
+        <>
+            <h2>User Child - 1 (UserContext.Consumer)</h2>
+            <EmployeeContext.Consumer>
+            {(emp) => {
+                    return(
+                      <>
+                        <p>Employee ID  : {emp.eid}</p>
+                        <p>First Name   : {emp.efnm}</p>
+                        <p>Last Name    : {emp.elnm}</p>
+                        <p>Salary       : ${emp.salary}</p>
+                      </>
+                    )
+                }    
+            }
+            </EmployeeContext.Consumer>
+        </>
     )
   }
 }
