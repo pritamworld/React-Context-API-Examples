@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import EmployeeContext from './EmployeeContext'
+import EmployeeContext from '../context/EmployeeContext'
 
 export default class UserChild1 extends Component {
   render() {

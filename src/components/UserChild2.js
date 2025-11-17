@@ -1,7 +1,7 @@
 import React from 'react'
-import EmployeeContext from './EmployeeContext'
+import EmployeeContext from '../context/EmployeeContext'
 import UserChild3 from './UserChild3'
-import UserContext from './UserContext'
+import UserContext from '../context/UserContext'
 
 const user = {
     user_name: "Omar Nabi",

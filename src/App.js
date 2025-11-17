@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import EmployeeContext from './EmployeeContext'
-import Home from './Home';
+import EmployeeContext from './context/EmployeeContext'
+import Home from './components/Home';
 
 const employee = {
   eid: 1,

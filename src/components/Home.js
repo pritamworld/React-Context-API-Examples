@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import UserChild1 from './UserChild1'
 import UserChild2 from './UserChild2'
-import EmployeeContext from './EmployeeContext'
+import EmployeeContext from '../context/EmployeeContext'
 
 export default class Home extends Component {
   static contextType = EmployeeContext

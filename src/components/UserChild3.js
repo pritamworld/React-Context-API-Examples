@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import EmployeeContext from './EmployeeContext'
-import UserContext from './UserContext'
+import EmployeeContext from '../context/EmployeeContext'
+import UserContext from '../context/UserContext'
 
 export default function UserChild3() {
   
